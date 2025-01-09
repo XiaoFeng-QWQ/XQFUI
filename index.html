@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 组件库示例</title>
+    <link rel="stylesheet" href="XQFUI.css">
+    <style>
+        @font-face {
+            font-family: ChillRoundF;
+            src: url("../fonts/ChillRoundFRegular.woff") format("truetype"),
+                url("../fonts/ChillRoundFBold.woff") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: ChillRoundF, Verdana, Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        main {
+            margin-top: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #about {
+            width: 100%;
+        }
+
+        #about .about-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        #about .mdui-img-circle {
+            width: auto;
+            max-height: 7rem;
+        }
+
+        #about .about-text {
+            columns: 2;
+            column-gap: 4rem;
+            column-rule: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="XQFUI-navbar">
+        <a href="#">首页</a>
+        <a href="#about">关于</a>
+        <a href="#module">组件</a>
+    </div>
+
+    <header id="XQFUI-top-banner">
+        <div class="XQFUI-flex">
+            <h1><i class="fa-solid fa-house"></i> 欢迎来到XQFUI主页</h1>
+            <span>温暖而简约 の CSS UI组件库</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="XQFUI-card" id="about">
+            <h2><i class="fas fa-user"></i> 关于</h2>
+            <div class="about-content">
+                <img class="mdui-img-circle" style="max-height: 7rem;"
+                    src="https://q.qlogo.cn/headimg_dl?dst_uin=1432777209&spec=640&img_type=jpg">
+                <div class="about-text">
+                    <p>此UI最早是我个人主页用的CSS，后来(2025年1月9日)封装为了一套UI组件库</p>
+                    <span class="column"></span>
+                    <p>XQFUI是一个温暖而简约的CSS组件库，专为优雅舒适的视觉体验设计。采用金色和米黄色等柔和色调，实现自然与现代的平衡。适用于各种网站和应用场景。从按钮到卡片，从打字动画到响应式布局，XQFUI使界面既现代又温馨活力。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="XQFUI-card">
+            <h2><i class="fas fa-cogs"></i> 卡片组件</h2>
+            <h3>卡片副标题</h3>
+            <p>卡片内容</p>
+        </div>
+
+        <div class="XQFUI-card" id="module">
+            <h2><i class="fas fa-share-alt"></i> 进度条</h2>
+            <h3>默认长度为100%</h3>
+            <div class="XQFUI-progress-bar">
+                <div class="XQFUI-progress" style="width: 50%;">50% 可以放文本！</div>
+            </div>
+            <div class="XQFUI-progress-bar">
+                <div class="XQFUI-progress">100%</div>
+            </div>
+        </div>
+
+        <div class="XQFUI-card">
+            <h2><i class=" fas fa-link"></i> 表单</h2>
+            <h3>嗯……目前就一个文本框</h3>
+            <input type="text" class="XQFUI-input-field" placeholder="请输入内容">
+        </div>
+
+        <div class="XQFUI-card">
+            <h2>弹出框</h2>
+            <button class="XQFUI-main-btn" data-open-modal="#example-modal">打开</button>
+        </div>
+
+        <div class="XQFUI-card">
+            <h2>按钮</h2>
+            <button class="XQFUI-main-btn">点我</button>
+            <button class="XQFUI-main-btn">点我</button>
+            <button class="XQFUI-main-btn">点我</button>
+            <button class="XQFUI-main-btn">点我</button>
+            <button class="XQFUI-main-btn">点我</button>
+            <button class="XQFUI-main-btn">点我</button>
+        </div>
+
+        <div class="XQFUI-card">
+            <h2>没了，就这点</h2>
+            <h3>awa</h3>
+        </div>
+    </main>
+    <div class="XQFUI-modal-overlay" id="example-modal">
+        <div class="XQFUI-modal">
+            <div class="XQFUI-modal-header">弹出框标题</div>
+            <div class="XQFUI-modal-body">这里是弹出框内容。</div>
+            <div class="XQFUI-modal-footer">
+                <button class="XQFUI-main-btn close-btn">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#f5f5dc" fill-opacity="0.5"
+            d="M0,256L48,245.3C96,235,192,213,288,186.7C384,160,480,128,576,122.7C672,117,768,139,864,128C960,117,1056,75,1152,80C1248,85,1344,139,1392,165.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+
+    <footer class="XQFUI-footer">
+        <p><i class="fa-solid fa-copyright"></i> <a class="XQFUI-a" href="https://blog.zicheng.icu" target="_blank"
+                rel="noopener noreferrer">2024
+                [小枫_QWQ]</a> </p>
+        <p style="right: 0;position: absolute;">UI:V1.0.0 HTML:V1.0.0</p>
+    </footer>
+    <script src="jquery.min.js"></script>
+    <script src="XQFUI.js"></script>
+</body>
+
+</html>

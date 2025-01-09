@@ -1,0 +1,273 @@
+/* XQFUI v1.0.0 | MIT License | https://github.com/XiaoFeng-QWQ/XQFUI */
+
+/* Define CSS Variables */
+:root {
+    --primary-color: #FFD700;
+    --secondary-color: #FF8C00;
+    --background-color: #fffbf0;
+    --text-color-light: #fff;
+    --text-color-dark: #333;
+    --text-color-medium: #555;
+    --text-color-muted: #666;
+    --border-radius: 5px;
+    --transition-speed: 0.3s;
+    --box-shadow-light: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: 0 8px 15px rgba(0, 0, 0, 0.2);
+    --banner-height: 90vh;
+    --modal-max-width: 500px;
+}
+
+/* General Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+}
+
+.XQFUI-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.XQFUI-main-btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 2px solid transparent;
+    background-size: 200%;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.XQFUI-main-btn:hover {
+    color: var(--text-color-light);
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow-dark);
+    transform: translateY(-2px);
+}
+
+.XQFUI-main-btn:active {
+    border-color: var(--secondary-color);
+    transform: translateY(2px);
+}
+
+.XQFUI-card {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--text-color-light);
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.XQFUI-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-dark);
+}
+
+.XQFUI-card p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: var(--text-color-medium);
+}
+
+.XQFUI-card h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--text-color-dark);
+}
+
+.XQFUI-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: var(--text-color-muted);
+}
+
+#XQFUI-top-banner {
+    position: relative;
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(245 245 220);
+    background-size: cover;
+    height: var(--banner-height);
+}
+
+#XQFUI-top-banner svg {
+    position: absolute;
+    top: 0;
+}
+
+#XQFUI-top-banner h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+#XQFUI-top-banner span {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-top: 200px;
+    position: absolute;
+}
+
+.XQFUI-footer {
+    background-color: #FFF1E0;
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+.XQFUI-footer p {
+    color: var(--text-color-medium);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #XQFUI-top-banner h1 {
+        font-size: 2.5em;
+    }
+
+    .XQFUI-main {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #XQFUI-top-banner p,
+    .XQFUI-card h2,
+    .XQFUI-main-btn {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 768px) {
+    .XQFUI-card {
+        width: 48%;
+        box-sizing: border-box;
+    }
+}
+
+.XQFUI-navbar {
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: var(--text-color-light);
+}
+
+.XQFUI-navbar a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed);
+}
+
+.XQFUI-navbar a:hover {
+    background-color: var(--text-color-light);
+    color: var(--primary-color);
+}
+
+.XQFUI-input-field {
+    padding: 12px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: 1.2em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color var(--transition-speed);
+}
+
+.XQFUI-input-field:focus {
+    border-color: #ff9900;
+    outline: none;
+}
+
+.XQFUI-ul {
+    list-style: none;
+}
+
+.XQFUI-a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color var(--transition-speed), text-decoration var(--transition-speed);
+}
+
+.XQFUI-a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline solid var(--secondary-color);
+}
+
+.XQFUI-progress-bar {
+    background-color: #f3f3f3;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.XQFUI-progress-bar .XQFUI-progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    transition: width 0.6s linear;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.XQFUI-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999999999;
+}
+
+.XQFUI-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: var(--modal-max-width);
+}
+
+.XQFUI-modal-header {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.XQFUI-modal-body {
+    font-size: 1.2em;
+}
+
+.XQFUI-modal-footer {
+    text-align: right;
+}
