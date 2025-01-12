@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="zh">
-
-<head>
+<head lang="zh-CN">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XQFUI - 小枫_QWQ</title>
+    <title>XQFUI - Powered By 小枫_QWQ</title>
     <meta name="description"
         content="XQFUI是一个温暖而简约的CSS组件库，专为优雅舒适的视觉体验设计。采用金色和米黄色等柔和色调，实现自然与现代的平衡。适用于各种网站和应用场景。从按钮到卡片，从打字动画到响应式布局，XQFUI使界面既现代又温馨活力。">
-    <meta name="keywords" content="小枫_QWQ,UI,XQFUI">
+    <meta name="keywords" content="小枫_QWQ,UI,XQFUI, CSS组件库,网页设计,UI组件">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="XQFUI - 小枫_QWQ">
+    <meta property="og:description" content="XQFUI是一个温暖而简约的CSS组件库，专为优雅舒适的视觉体验设计。适用于各种网站和应用场景。">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="XQFUI - 小枫_QWQ">
+    <meta name="twitter:description" content="XQFUI是一个温暖而简约的CSS组件库，专为优雅舒适的视觉体验设计。适用于各种网站和应用场景。">
+
     <link rel="stylesheet" href="XQFUI.css">
     <style>
         @font-face {
@@ -40,7 +44,7 @@
             gap: 1rem;
         }
 
-        #about .mdui-img-circle {
+        #about img {
             width: auto;
             max-height: 7rem;
         }
@@ -72,8 +76,7 @@
         <div class="XQFUI-card" id="about">
             <h2><i class="fas fa-user"></i> 关于</h2>
             <div class="about-content">
-                <img class="mdui-img-circle" style="max-height: 7rem;"
-                    src="https://q.qlogo.cn/headimg_dl?dst_uin=1432777209&spec=640&img_type=jpg">
+                <img alt="XQFUI logo" src="https://q.qlogo.cn/headimg_dl?dst_uin=1432777209&spec=640&img_type=jpg">
                 <div class="about-text">
                     <p>此UI最早是我个人主页用的CSS，后来(2025年1月9日)封装为了一套UI组件库</p>
                     <span class="column"></span>
@@ -108,7 +111,7 @@
 
         <div class="XQFUI-card">
             <h2>弹出框</h2>
-            <button class="XQFUI-main-btn" data-open-modal="#example-modal">打开</button>
+            <button class="XQFUI-main-btn" aria-label="打开弹出框" data-open-modal="#example-modal">打开</button>
         </div>
 
         <div class="XQFUI-card">
@@ -144,10 +147,10 @@
 
     <footer class="XQFUI-footer">
         <p>
-            <a class="XQFUI-a" href="https://blog.zicheng.icu" target="_blank"
-                rel="noopener noreferrer">2025 [小枫_QWQ]</a>
+            <a class="XQFUI-a" href="https://blog.zicheng.icu" target="_blank" rel="noopener noreferrer">2025
+                [小枫_QWQ]</a>
         </p>
-        <p style="right: 0;position: absolute;">UI:V1.0.0 HTML:V1.1.1</p>
+        <p style="right: 0;position: absolute;">UI:V1.0.0 HTML:V1.1.2</p>
     </footer>
     <script src="jquery.min.js"></script>
     <script src="XQFUI.js"></script>
